@@ -51,8 +51,10 @@ function templateEngine(responseJson, maxResults) {
     $('ul').append(`
     <li>
       <h2>${responseJson["data"][i]["name"]}</h2>
+      <p><img src=${responseJson["data"][i]["images"][0]["url"]} alt=${responseJson["data"][i]["images"][0]["altText"]}></p>
       <a href="${responseJson["data"][i]["url"]}">Park URL</a>
-      <p>${responseJson["data"][i]["directionsInfo"]}</p>
+      <p>${responseJson["data"][i]["addresses"][0]["city"]}, ${responseJson["data"][i]["addresses"][0]["stateCode"]}, ${responseJson["data"][i]["addresses"][0]["postalCode"]}</p>
+      <p>${responseJson["data"][i]["description"]}</p>
     </li>
     `);
   }

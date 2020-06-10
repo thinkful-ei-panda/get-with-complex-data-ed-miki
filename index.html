@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
@@ -13,9 +14,10 @@
 <main>
     <form>
         <input class="state-code" type="text" placeholder="State Code" required>
-        <input class="max-results" type="text" placeholder="Number of Results" required>
+        <input class="max-results" type="text" placeholder="Search Results Limit: 10" required>
         <button type="submit">Submit Query</button>
     </form>
+    <p>*For a multi-state code search, please format as: XX, XX</p>
 
     <p class="js-search-results"></p>
     <section class="results">
